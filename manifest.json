@@ -1,0 +1,22 @@
+
+{
+  "name": "JARVIS OS PRO",
+  "short_name": "JARVIS",
+  "description": "High-Performance AI Developer Studio & Media Suite by Tarun Joshi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00E5FF",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/jarvis/192/192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://picsum.photos/seed/jarvis/512/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
