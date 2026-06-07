@@ -1,0 +1,49 @@
+
+{
+  "entities": {
+    "Category": {
+      "title": "Category",
+      "description": "Spiritual wallpaper categories",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "icon": { "type": "string" },
+        "status": { "type": "boolean" },
+        "display_order": { "type": "number" },
+        "wallpaper_count": { "type": "number" }
+      },
+      "required": ["name", "status", "display_order"]
+    },
+    "Wallpaper": {
+      "title": "Wallpaper",
+      "description": "Divine wallpaper metadata",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "thumbnailUrl": { "type": "string" },
+        "category_name": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "downloads": { "type": "number" },
+        "likes": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "featured": { "type": "boolean" },
+        "status": { "type": "boolean" }
+      },
+      "required": ["title", "imageUrl", "category_name", "tags", "status"]
+    }
+  },
+  "auth": {
+    "providers": ["google.com"]
+  },
+  "firestore": {
+    "/categories/{categoryId}": {
+      "schema": "Category",
+      "description": "Collection of spiritual wallpaper categories"
+    },
+    "/wallpapers/{wallpaperId}": {
+      "schema": "Wallpaper",
+      "description": "Collection of divine wallpapers with tags and metadata"
+    }
+  }
+}
